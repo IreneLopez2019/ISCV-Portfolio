@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+
+    @media (max-width: 992px) {
+        padding: 0 25px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: linotype-didot, serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+}
