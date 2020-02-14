@@ -1,0 +1,37 @@
+.content-section-nav {
+    position: fixed;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+
+    button {
+        color: var(--title-color);
+        font-size: 18px;
+        font-weight: 700;
+        font-family: linotype-didot, serif;
+        background-color: transparent;
+        border: none;
+
+    }
+
+    ul {
+        list-style: none;
+
+        + button{
+            margin-top: 30px;
+        }
+
+        li {
+        }
+
+        a {
+            font-size: 16px;
+            text-decoration: none;
+            color: var(--title-color);
+
+            &:hover{
+                font-weight: 700;
+            }
+        }
+    }
+}

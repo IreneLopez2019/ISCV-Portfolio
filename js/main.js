@@ -3,8 +3,7 @@ import { categories } from "./constants/categories.js";
 const modalWrapper = document.querySelector(".modal-wrapper");
 const modalImg = document.querySelector("#modal-img");
 const modalOverlay = document.querySelector(".modal-overlay");
-const modalCloseBtn = document.querySelector(".modal-close-btn")
-
+const modalCloseBtn = document.querySelector(".modal-close-btn");
 
 function setMenu() {
     const navMenu = document.querySelector("#nav-menu");
@@ -16,8 +15,9 @@ function setMenu() {
         let li = document.createElement("li");
         let link = document.createElement("a");
 
-        link.setAttribute("href", `#${category.id}`);
+        link.href = `#${category.id}`;
         link.innerHTML = category.title;
+
         li.appendChild(link);
         navMenuItems.appendChild(li);
     }
@@ -34,11 +34,12 @@ function setCategories() {
 
         sectionTitle.innerText = category.title;
         sectionTitle.classList.add("category-name");
-        section.setAttribute("id", category.id);
         section.classList.add("projects-section");
         section.appendChild(sectionTitle);
+        section.id = category.id;
 
         setProjects(section, category.projects);
+        setProjectsNavigation(category);
 
         contentSection.appendChild(section);
     }
@@ -64,14 +65,37 @@ function setProjects(section, projects) {
         if (project.image) {
             projectImage.classList.add("has-image");
             projectImage.style.backgroundImage = `url(${project.image})`;
-            projectImage.addEventListener("click", () => toggleModal(true, project));
+            projectImage.addEventListener("click", () =>
+                toggleModal(true, project)
+            );
         }
 
-        projectImageWrapper.append(projectImage);
+        projectWrapper.id = replaceTextSpaces(project.name);
+
+        projectImageWrapper.appendChild(projectImage);
         projectTextContainer.append(projectTitle, projectDescription);
         projectWrapper.append(projectImageWrapper, projectTextContainer);
         section.appendChild(projectWrapper);
     }
+}
+
+function setProjectsNavigation(category) {
+    const contentNavigation = document.querySelector(".content-section-nav");
+    let categoryButton = document.createElement("button");
+    let projectsList = document.createElement("ul");
+
+    categoryButton.innerText = category.title;
+
+    for (let project of category.projects) {
+        let projectItem = document.createElement("li");
+        let projectItemLink = document.createElement("a");
+        projectItemLink.href = `#${replaceTextSpaces(project.name)}`;
+        projectItemLink.innerText = project.name;
+        projectItem.appendChild(projectItemLink);
+        projectsList.appendChild(projectItem);
+    }
+
+    contentNavigation.append(categoryButton, projectsList);
 }
 
 function toggleModal(boolean, project) {
@@ -79,12 +103,15 @@ function toggleModal(boolean, project) {
         modalWrapper.style.display = "flex";
         modalImg.alt = project.name;
         modalImg.src = project.image;
-    }
-    else {
+    } else {
         modalWrapper.style.display = "none";
         modalImg.alt = "";
         modalImg.src = "";
     }
+}
+
+function replaceTextSpaces(word) {
+    return word.replace(/ /g, "_").toLowerCase();
 }
 
 modalOverlay.addEventListener("click", () => toggleModal(false, null));

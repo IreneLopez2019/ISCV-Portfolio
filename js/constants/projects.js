@@ -1,6 +1,6 @@
 export const ilustracionProjects = [
     {
-        name: "Project 1 - Ilustración",
+        name: "Mi tía Chus",
         image:
             "https://digitalisthub.com/wp-content/uploads/2017/02/google-logo.jpg",
         description:
