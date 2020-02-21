@@ -3,25 +3,27 @@
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
+    display: none;
+    z-index: 1;
 
-    button {
+    &.is-visible {
+        display: block;
+    }
+
+    .category-link {
         color: var(--title-color);
         font-size: 18px;
         font-weight: 700;
         font-family: linotype-didot, serif;
         background-color: transparent;
         border: none;
-
     }
 
     ul {
         list-style: none;
 
-        + button{
+        + button {
             margin-top: 30px;
-        }
-
-        li {
         }
 
         a {
@@ -29,7 +31,7 @@
             text-decoration: none;
             color: var(--title-color);
 
-            &:hover{
+            &:hover {
                 font-weight: 700;
             }
         }
