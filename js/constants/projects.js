@@ -1,25 +1,26 @@
 export const ilustracionProjects = [
     {
+        id: "mi-tia-chus-project",
         name: "Mi tía Chus",
-        image:
-            "https://digitalisthub.com/wp-content/uploads/2017/02/google-logo.jpg",
+        mainImage: "assets/img/imagenes/mi_tia_chus.png",
+        otherImages: [
+            "assets/img/imagenes/cuervos-07.png",
+            "assets/img/imagenes/aspronaga-07.png"
+        ],
         description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis illo quidem quod vitae voluptates ratione sapiente temporibus adipisci, nemo cumque dicta ad et fugit maiores ullam! Necessitatibus accusantium deserunt dolore quas laborum voluptatibus accusamus fuga atque assumenda, perferendis sed expedita possimus aliquam cupiditate doloremque asperiores provident qui veritatis, dicta cum consequatur animi quia. Velit repellat modi perferendis autem. Quia illo corrupti voluptates, non ipsa laboriosam voluptatum sunt, quos eaque dolorum repellat neque itaque quibusdam amet veritatis praesentium ex. Voluptate, nisi reprehenderit facere consectetur esse similique expedita a nemo voluptatum at quod mollitia. Possimus, consequuntur nesciunt labore esse provident at?"
+            "Mi tía Chus fue un proyecto Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, harum doloremque. Iusto quis obcaecati vitae nobis facilis esse soluta reprehenderit minima in, corrupti nam accusamus praesentium, eum repellendus magnam ducimus!"
     },
     {
-        name: "Project 2 - Ilustración",
+        id: "pictionary-project",
+        name: "Pictonary",
+        mainImage: "assets/img/imagenes/pictionary.png",
+        otherImages: [
+            "assets/img/imagenes/cartas-07.png",
+            "assets/img/imagenes/cartas-08.png",
+            "assets/img/imagenes/cartas-09.png"
+        ],
         description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis illo quidem quod vitae voluptates ratione sapiente temporibus adipisci, nemo cumque dicta ad et fugit maiores ullam! Necessitatibus accusantium deserunt dolore quas laborum voluptatibus accusamus fuga atque assumenda, perferendis sed expedita possimus aliquam cupiditate doloremque asperiores provident qui veritatis, dicta cum consequatur animi quia. Velit repellat modi perferendis autem. Quia illo corrupti voluptates, non ipsa laboriosam voluptatum sunt, quos eaque dolorum repellat neque itaque quibusdam amet veritatis praesentium ex. Voluptate, nisi reprehenderit facere consectetur esse similique expedita a nemo voluptatum at quod mollitia. Possimus, consequuntur nesciunt labore esse provident at?"
-    },
-    {
-        name: "Project 3 - Ilustración",
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis illo quidem quod vitae voluptates ratione sapiente temporibus adipisci, nemo cumque dicta ad et fugit maiores ullam! Necessitatibus accusantium deserunt dolore quas laborum voluptatibus accusamus fuga atque assumenda, perferendis sed expedita possimus aliquam cupiditate doloremque asperiores provident qui veritatis, dicta cum consequatur animi quia. Velit repellat modi perferendis autem. Quia illo corrupti voluptates, non ipsa laboriosam voluptatum sunt, quos eaque dolorum repellat neque itaque quibusdam amet veritatis praesentium ex. Voluptate, nisi reprehenderit facere consectetur esse similique expedita a nemo voluptatum at quod mollitia. Possimus, consequuntur nesciunt labore esse provident at?"
-    },
-    {
-        name: "Project 4 - Ilustración",
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis illo quidem quod vitae voluptates ratione sapiente temporibus adipisci, nemo cumque dicta ad et fugit maiores ullam! Necessitatibus accusantium deserunt dolore quas laborum voluptatibus accusamus fuga atque assumenda, perferendis sed expedita possimus aliquam cupiditate doloremque asperiores provident qui veritatis, dicta cum consequatur animi quia. Velit repellat modi perferendis autem. Quia illo corrupti voluptates, non ipsa laboriosam voluptatum sunt, quos eaque dolorum repellat neque itaque quibusdam amet veritatis praesentium ex. Voluptate, nisi reprehenderit facere consectetur esse similique expedita a nemo voluptatum at quod mollitia. Possimus, consequuntur nesciunt labore esse provident at?"
+            "Pictionary fue un proyecto Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, harum doloremque. Iusto quis obcaecati vitae nobis facilis esse soluta reprehenderit minima in, corrupti nam accusamus praesentium, eum repellendus magnam ducimus!"
     }
 ];
 
@@ -35,16 +36,6 @@ export const brandingProjects = [
             "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/4f18b992206863.5e4560580cd12.jpg",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis illo quidem quod vitae voluptates ratione sapiente temporibus adipisci, nemo cumque dicta ad et fugit maiores ullam! Necessitatibus accusantium deserunt dolore quas laborum voluptatibus accusamus fuga atque assumenda, perferendis sed expedita possimus aliquam cupiditate doloremque asperiores provident qui veritatis, dicta cum consequatur animi quia. Velit repellat modi perferendis autem. Quia illo corrupti voluptates, non ipsa laboriosam voluptatum sunt, quos eaque dolorum repellat neque itaque quibusdam amet veritatis praesentium ex. Voluptate, nisi reprehenderit facere consectetur esse similique expedita a nemo voluptatum at quod mollitia. Possimus, consequuntur nesciunt labore esse provident at?"
-    },
-    {
-        name: "Project 3 - Branding",
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis illo quidem quod vitae voluptates ratione sapiente temporibus adipisci, nemo cumque dicta ad et fugit maiores ullam! Necessitatibus accusantium deserunt dolore quas laborum voluptatibus accusamus fuga atque assumenda, perferendis sed expedita possimus aliquam cupiditate doloremque asperiores provident qui veritatis, dicta cum consequatur animi quia. Velit repellat modi perferendis autem. Quia illo corrupti voluptates, non ipsa laboriosam voluptatum sunt, quos eaque dolorum repellat neque itaque quibusdam amet veritatis praesentium ex. Voluptate, nisi reprehenderit facere consectetur esse similique expedita a nemo voluptatum at quod mollitia. Possimus, consequuntur nesciunt labore esse provident at?"
-    },
-    {
-        name: "Project 4 - Branding",
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis illo quidem quod vitae voluptates ratione sapiente temporibus adipisci, nemo cumque dicta ad et fugit maiores ullam! Necessitatibus accusantium deserunt dolore quas laborum voluptatibus accusamus fuga atque assumenda, perferendis sed expedita possimus aliquam cupiditate doloremque asperiores provident qui veritatis, dicta cum consequatur animi quia. Velit repellat modi perferendis autem. Quia illo corrupti voluptates, non ipsa laboriosam voluptatum sunt, quos eaque dolorum repellat neque itaque quibusdam amet veritatis praesentium ex. Voluptate, nisi reprehenderit facere consectetur esse similique expedita a nemo voluptatum at quod mollitia. Possimus, consequuntur nesciunt labore esse provident at?"
     }
 ];
 
@@ -56,16 +47,6 @@ export const editorialProjects = [
     },
     {
         name: "Project 2 - Editorial",
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis illo quidem quod vitae voluptates ratione sapiente temporibus adipisci, nemo cumque dicta ad et fugit maiores ullam! Necessitatibus accusantium deserunt dolore quas laborum voluptatibus accusamus fuga atque assumenda, perferendis sed expedita possimus aliquam cupiditate doloremque asperiores provident qui veritatis, dicta cum consequatur animi quia. Velit repellat modi perferendis autem. Quia illo corrupti voluptates, non ipsa laboriosam voluptatum sunt, quos eaque dolorum repellat neque itaque quibusdam amet veritatis praesentium ex. Voluptate, nisi reprehenderit facere consectetur esse similique expedita a nemo voluptatum at quod mollitia. Possimus, consequuntur nesciunt labore esse provident at?"
-    },
-    {
-        name: "Project 3 - Editorial",
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis illo quidem quod vitae voluptates ratione sapiente temporibus adipisci, nemo cumque dicta ad et fugit maiores ullam! Necessitatibus accusantium deserunt dolore quas laborum voluptatibus accusamus fuga atque assumenda, perferendis sed expedita possimus aliquam cupiditate doloremque asperiores provident qui veritatis, dicta cum consequatur animi quia. Velit repellat modi perferendis autem. Quia illo corrupti voluptates, non ipsa laboriosam voluptatum sunt, quos eaque dolorum repellat neque itaque quibusdam amet veritatis praesentium ex. Voluptate, nisi reprehenderit facere consectetur esse similique expedita a nemo voluptatum at quod mollitia. Possimus, consequuntur nesciunt labore esse provident at?"
-    },
-    {
-        name: "Project 4 - Editorial",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis illo quidem quod vitae voluptates ratione sapiente temporibus adipisci, nemo cumque dicta ad et fugit maiores ullam! Necessitatibus accusantium deserunt dolore quas laborum voluptatibus accusamus fuga atque assumenda, perferendis sed expedita possimus aliquam cupiditate doloremque asperiores provident qui veritatis, dicta cum consequatur animi quia. Velit repellat modi perferendis autem. Quia illo corrupti voluptates, non ipsa laboriosam voluptatum sunt, quos eaque dolorum repellat neque itaque quibusdam amet veritatis praesentium ex. Voluptate, nisi reprehenderit facere consectetur esse similique expedita a nemo voluptatum at quod mollitia. Possimus, consequuntur nesciunt labore esse provident at?"
     }

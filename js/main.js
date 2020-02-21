@@ -1,9 +1,21 @@
 import { categories } from "./constants/categories.js";
 
+const infoWrapper = document.querySelector(".information-wrapper");
 const modalWrapper = document.querySelector(".modal-wrapper");
 const modalImg = document.querySelector("#modal-img");
 const modalOverlay = document.querySelector(".modal-overlay");
 const modalCloseBtn = document.querySelector(".modal-close-btn");
+const contentNavigation = document.querySelector(".content-section-nav");
+
+document.addEventListener("scroll", () => {
+    let infoWrapperBottom = infoWrapper.getBoundingClientRect().bottom;
+
+    if (infoWrapperBottom <= -15) {
+        contentNavigation.classList.add("is-visible");
+    } else {
+        contentNavigation.classList.remove("is-visible");
+    }
+});
 
 function setMenu() {
     const navMenu = document.querySelector("#nav-menu");
@@ -16,7 +28,7 @@ function setMenu() {
         let link = document.createElement("a");
 
         link.href = `#${category.id}`;
-        link.innerHTML = category.title;
+        link.innerText = category.title;
 
         li.appendChild(link);
         navMenuItems.appendChild(li);
@@ -30,13 +42,13 @@ function setCategories() {
 
     for (let category of categories) {
         let section = document.createElement("div");
-        let sectionTitle = document.createElement("h1");
+        let sectionLogo = document.createElement("div");
 
-        sectionTitle.innerText = category.title;
-        sectionTitle.classList.add("category-name");
-        section.classList.add("projects-section");
-        section.appendChild(sectionTitle);
         section.id = category.id;
+        section.classList.add("section-wrapper");
+        sectionLogo.innerHTML = category.logo;
+        sectionLogo.classList.add("section-logo");
+        section.appendChild(sectionLogo);
 
         setProjects(section, category.projects);
         setProjectsNavigation(category);
@@ -49,42 +61,58 @@ function setProjects(section, projects) {
     for (let project of projects) {
         let projectWrapper = document.createElement("div");
         let projectImageWrapper = document.createElement("div");
-        let projectImage = document.createElement("div");
         let projectTextContainer = document.createElement("div");
         let projectTitle = document.createElement("h2");
         let projectDescription = document.createElement("p");
+        let projectImage = document.createElement("img");
+        let projectOtherImages = document.createElement("div");
 
-        projectImageWrapper.classList.add("project-image-wrapper");
         projectWrapper.classList.add("project-wrapper");
-        projectImage.classList.add("project-thumb");
         projectTextContainer.classList.add("project-text");
+        projectImageWrapper.classList.add("project-image-wrapper");
+        projectImage.classList.add("project-image");
+        projectOtherImages.classList.add("project-other-images");
 
         projectTitle.innerText = project.name;
         projectDescription.innerText = project.description;
 
-        if (project.image) {
-            projectImage.classList.add("has-image");
-            projectImage.style.backgroundImage = `url(${project.image})`;
-            projectImage.addEventListener("click", () =>
-                toggleModal(true, project)
+        if (project.mainImage) {
+            projectImage.src = project.mainImage;
+            projectImage.addEventListener("click", ({ target }) =>
+                toggleModal(true, project, target)
             );
         }
 
-        projectWrapper.id = replaceTextSpaces(project.name);
+        if (project.otherImages) {
+            for (let image of project.otherImages) {
+                let projectImage = document.createElement("img");
+                projectImage.src = image;
+                projectOtherImages.appendChild(projectImage);
+                projectImage.addEventListener("click", ({ target }) =>
+                    toggleModal(true, project, target)
+                );
+            }
+        }
 
-        projectImageWrapper.appendChild(projectImage);
+        projectWrapper.id = replaceTextSpaces(project.name);
         projectTextContainer.append(projectTitle, projectDescription);
-        projectWrapper.append(projectImageWrapper, projectTextContainer);
+        projectImageWrapper.appendChild(projectImage);
+        projectWrapper.append(
+            projectTextContainer,
+            projectImageWrapper,
+            projectOtherImages
+        );
         section.appendChild(projectWrapper);
     }
 }
 
 function setProjectsNavigation(category) {
-    const contentNavigation = document.querySelector(".content-section-nav");
-    let categoryButton = document.createElement("button");
+    let categoryLink = document.createElement("a");
     let projectsList = document.createElement("ul");
 
-    categoryButton.innerText = category.title;
+    categoryLink.classList.add("category-link");
+    categoryLink.href = `#${category.id}`;
+    categoryLink.innerText = category.title;
 
     for (let project of category.projects) {
         let projectItem = document.createElement("li");
@@ -95,14 +123,14 @@ function setProjectsNavigation(category) {
         projectsList.appendChild(projectItem);
     }
 
-    contentNavigation.append(categoryButton, projectsList);
+    contentNavigation.append(categoryLink, projectsList);
 }
 
-function toggleModal(boolean, project) {
+function toggleModal(boolean, project, target) {
     if (boolean) {
         modalWrapper.style.display = "flex";
         modalImg.alt = project.name;
-        modalImg.src = project.image;
+        modalImg.src = target.src;
     } else {
         modalWrapper.style.display = "none";
         modalImg.alt = "";
