@@ -66,12 +66,14 @@ function setProjects(section, projects) {
         let projectDescription = document.createElement("p");
         let projectImage = document.createElement("img");
         let projectOtherImages = document.createElement("div");
+        let projectOtherOtherImages = document.createElement("div");
 
         projectWrapper.classList.add("project-wrapper");
         projectTextContainer.classList.add("project-text");
         projectImageWrapper.classList.add("project-image-wrapper");
         projectImage.classList.add("project-image");
         projectOtherImages.classList.add("project-other-images");
+        projectOtherOtherImages.classList.add("project-other-other-images");
 
         projectTitle.innerText = project.name;
         projectDescription.innerText = project.description;
@@ -94,13 +96,25 @@ function setProjects(section, projects) {
             }
         }
 
+        if (project.otherOtherImages) {
+            for (let image of project.otherOtherImages) {
+                let projectImage = document.createElement("img");
+                projectImage.src = image;
+                projectOtherOtherImages.appendChild(projectImage);
+                projectImage.addEventListener("click", ({ target }) =>
+                    toggleModal(true, project, target)
+                );
+            }
+        }
+
         projectWrapper.id = replaceTextSpaces(project.name);
         projectTextContainer.append(projectTitle, projectDescription);
         projectImageWrapper.appendChild(projectImage);
         projectWrapper.append(
             projectTextContainer,
             projectImageWrapper,
-            projectOtherImages
+            projectOtherImages,
+            projectOtherOtherImages
         );
         section.appendChild(projectWrapper);
     }

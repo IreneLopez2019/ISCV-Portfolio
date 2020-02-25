@@ -5,8 +5,9 @@ export const ilustracionProjects = [
         mainImage: "assets/img/imagenes/mi_tia_chus.png",
         otherImages: [
             "assets/img/imagenes/cuervos-07.png",
-            "assets/img/imagenes/aspronaga-07.png"
+            "assets/img/imagenes/aspronaga-07.png",
         ],
+        otherOtherImages: "assets/img/imagenes/mi_tia_chus.png",
         description:
             "Mi tía Chus fue un proyecto Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, harum doloremque. Iusto quis obcaecati vitae nobis facilis esse soluta reprehenderit minima in, corrupti nam accusamus praesentium, eum repellendus magnam ducimus!"
     },
@@ -17,11 +18,24 @@ export const ilustracionProjects = [
         otherImages: [
             "assets/img/imagenes/cartas-07.png",
             "assets/img/imagenes/cartas-08.png",
-            "assets/img/imagenes/cartas-09.png"
+            "assets/img/imagenes/cartas-09.png",
         ],
+
+        // otherOtherImages: [
+        //     "assets/img/imagenes/caja-juego_1.png",
+        //     "assets/img/imagenes/tapa-pictionary_1.png",
+        // ],
+
         description:
             "Pictionary fue un proyecto Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, harum doloremque. Iusto quis obcaecati vitae nobis facilis esse soluta reprehenderit minima in, corrupti nam accusamus praesentium, eum repellendus magnam ducimus!"
-    }
+    },
+    {
+        id: "ilustración-tridimensional",
+        name: "Ilustración tridimensional",
+        mainImage: "assets/img/imagenes/meduza.png",
+        description:
+            "Mi tía Chus fue un proyecto Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, harum doloremque. Iusto quis obcaecati vitae nobis facilis esse soluta reprehenderit minima in, corrupti nam accusamus praesentium, eum repellendus magnam ducimus!"
+    },
 ];
 
 export const brandingProjects = [
