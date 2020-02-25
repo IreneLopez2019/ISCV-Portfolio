@@ -39,9 +39,11 @@ export const ilustracionProjects = [
 
 export const brandingProjects = [
     {
-        name: "Project 1 - Branding",
+        name: "Rediseño Trumpeter",
+        mainImage: "assets/img/imagenes/grilla-vinos.png",
+     
         description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis illo quidem quod vitae voluptates ratione sapiente temporibus adipisci, nemo cumque dicta ad et fugit maiores ullam! Necessitatibus accusantium deserunt dolore quas laborum voluptatibus accusamus fuga atque assumenda, perferendis sed expedita possimus aliquam cupiditate doloremque asperiores provident qui veritatis, dicta cum consequatur animi quia. Velit repellat modi perferendis autem. Quia illo corrupti voluptates, non ipsa laboriosam voluptatum sunt, quos eaque dolorum repellat neque itaque quibusdam amet veritatis praesentium ex. Voluptate, nisi reprehenderit facere consectetur esse similique expedita a nemo voluptatum at quod mollitia. Possimus, consequuntur nesciunt labore esse provident at?"
+        "Mi tía Chus fue un proyecto Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, harum doloremque. Iusto quis obcaecati vitae nobis facilis esse soluta reprehenderit minima in, corrupti nam accusamus praesentium, eum repellendus magnam ducimus!"
     },
     {
         name: "Project 2 - Branding",
