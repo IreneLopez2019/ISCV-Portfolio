@@ -1,121 +1,148 @@
 //-------- NAV ---------
 .nav-bar {
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  padding: 30px;
-  background-color: var(--background-color);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  align-items: center;
+	height: var(--header-height);
+	display: flex;
+	justify-content: space-between;
+	padding: 30px;
+	background-color: var(--background-color);
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	align-items: center;
 
-  .nav-logo {
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 700;
-    font-family: linotype-didot, serif;
-    color: var(--title-color);
-  }
+	.nav-logo {
+		text-decoration: none;
+		font-size: 30px;
+		font-weight: 700;
+		font-family: linotype-didot, serif;
+		color: var(--title-color);
+	}
 
-  .nav-menu-class {
-    .menu-items {
-      list-style: none;
+	.nav-menu-class {
+		.menu-items {
+			list-style: none;
 
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
 
-      li {
-        + li {
-          margin-left: 50px;
-        }
+			li {
+				+ li {
+					margin-left: 50px;
+				}
 
-        a {
-          font-size: 18px;
-          text-decoration: none;
-          color: var(--title-color);
-          margin-bottom: 50px;
+				a {
+					font-size: 18px;
+					text-decoration: none;
+					color: var(--title-color);
+					margin-bottom: 50px;
 
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-    }
-  }
+					&:hover {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
 }
 
 //-------- HEADER ---------
 .information-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--background-color);
-  height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--background-color);
+	height: 100vh;
 
-  .home-header-section {
-    max-width: 950px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: var(--header-height);
+	.home-header-section {
+		max-width: 950px;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: var(--header-height);
 
-    .header-title-wrapper {
-      text-align: center;
+		.header-title-wrapper {
+			text-align: center;
 
-      .home-title,
-      .home-subtitle {
-        color: var(--title-color);
-      }
+			.home-title,
+			.home-subtitle {
+				color: var(--title-color);
+			}
 
-      .home-title {
-        font-size: 60px;
-        margin-bottom: 50px;
-      }
+			.home-title {
+				font-size: 60px;
+				margin-bottom: 50px;
+			}
 
-      .home-subtitle {
-        font-weight: 300;
-        font-size: 25px;
-      }
-    }
+			.home-subtitle {
+				font-weight: 300;
+				font-size: 25px;
+			}
+		}
 
-    .personal-information {
-      text-align: center;
-      line-height: 1.5;
-      margin-top: 10px;
-    }
-  }
+		.personal-information {
+			text-align: center;
+			line-height: 1.5;
+			margin-top: 10px;
+		}
+	}
 }
 
 //-------- BODY ---------
 .main-wrapper {
-  .ilustration {
+	.project {
+		margin-top: 70px;
+		display: grid;
+		img {
+			width: 950px;
+		}
+	}
 
-  }
+	.ilustration {
 
-  // --------------------
+		.imageFullScreen {
+			img {
+				width: 950px;
+			}
+		}
 
-  footer {
-    margin-bottom: 100px;
+		.textAndImage {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			max-width: 950px;
+			grid-gap: 5px;
 
-    h4 {
-      color: var(--title-color);
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-    .icon {
-      a {
-        color: var(--title-color);
-        font-size: 25px;
+			img{
+				width: 100%;
+			}
 
-        & + a {
-          margin-left: 10px;
-        }
+		}
 
-        &:hover {
-          color: #000855;
-        }
-      }
-    }
-  }
+	}
+
+
+	// --------------------
+
+	footer {
+		margin-bottom: 100px;
+
+		h4 {
+			color: var(--title-color);
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		.icon {
+			a {
+				color: var(--title-color);
+				font-size: 25px;
+
+				& + a {
+					margin-left: 10px;
+				}
+
+				&:hover {
+					color: #000855;
+				}
+			}
+		}
+	}
 }
