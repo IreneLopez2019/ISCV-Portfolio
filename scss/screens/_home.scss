@@ -98,27 +98,37 @@
 	}
 
 	.ilustration {
-
 		.imageFullScreen {
 			img {
 				width: 950px;
 			}
 		}
 
-		.textAndImage {
+		.imageAndImage {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			max-width: 950px;
 			grid-gap: 5px;
 
-			img{
+			img {
 				width: 100%;
 			}
 
+			.img-test {
+				object-fit: cover;
+			}
 		}
 
-	}
+		.imagesGallery {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			max-width: 950px;
 
+			img {
+				width: 100%;
+			}
+		}
+	}
 
 	// --------------------
 
