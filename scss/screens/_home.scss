@@ -9,6 +9,11 @@
 	top: 0;
 	z-index: 10;
 	align-items: center;
+	font-size: 1vw;
+
+	ul {
+		list-style-type: none;
+	}
 
 	.nav-logo {
 		text-decoration: none;
@@ -17,68 +22,26 @@
 		font-family: linotype-didot, serif;
 		color: var(--title-color);
 	}
-
-	.nav-menu-class {
-		.menu-items {
-			list-style: none;
-
-			display: flex;
-			align-items: flex-end;
-			justify-content: flex-end;
-
-			li {
-				+ li {
-					margin-left: 50px;
-				}
-
-				a {
-					font-size: 18px;
-					text-decoration: none;
-					color: var(--title-color);
-					margin-bottom: 50px;
-
-					&:hover {
-						font-weight: bold;
-					}
-				}
-			}
-		}
-	}
 }
 
-//-------- HEADER ---------
-.information-wrapper {
+//--------BODY---------
+.informationWrapper {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: var(--background-color);
 	height: 100vh;
+	flex-direction: column;
 
-	.home-header-section {
+	.homeInformationSection {
 		max-width: 950px;
 		display: flex;
 		flex-direction: column;
 		margin-bottom: var(--header-height);
 
-		.header-title-wrapper {
-			text-align: center;
-
-			.home-title,
-			.home-subtitle {
-				color: var(--title-color);
-			}
-
-			.home-title {
-				font-size: 60px;
-				margin-bottom: 50px;
-			}
-
-			.home-subtitle {
-				font-weight: 300;
-				font-size: 25px;
-			}
+		p{
+			margin: auto;
 		}
-
 		.personal-information {
 			text-align: center;
 			line-height: 1.5;
@@ -87,7 +50,7 @@
 	}
 }
 
-//-------- BODY ---------
+//--------PROJECTS ---------
 .main-wrapper {
 	.project {
 		margin-top: 70px;
