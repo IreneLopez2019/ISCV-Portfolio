@@ -11,6 +11,7 @@ html {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .main-wrapper {
@@ -33,6 +34,22 @@ h6 {
   font-weight: 700;
   font-style: normal;
   color: var(--title-color);
+}
+
+.home-title,
+.home-subtitle {
+	color: var(--title-color);
+	text-align: center;
+}
+
+.home-title {
+	font-size: 60px;
+	margin-bottom: 50px;
+}
+
+.home-subtitle {
+	font-weight: 300;
+	font-size: 25px;
 }
 
 .section-title {
