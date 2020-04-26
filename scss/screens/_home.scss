@@ -39,9 +39,7 @@
 		flex-direction: column;
 		margin-bottom: var(--header-height);
 
-		p{
-			margin: auto;
-		}
+
 		.personal-information {
 			text-align: center;
 			line-height: 1.5;
@@ -60,11 +58,16 @@
 		}
 	}
 
-	.ilustration {
+	.hasMarginBottom{
+		margin-bottom: 35px;
+	}
+
 		.imageFullScreen {
 			img {
-				width: 950px;
+				width: 100%;
 			}
+
+			
 		}
 
 		.imageAndImage {
@@ -91,6 +94,23 @@
 				width: 100%;
 			}
 		}
+	
+.textAndImage{
+	display: grid;
+	grid-template-columns: 75% 25%;
+	max-width: 950px;
+	grid-gap: 20px;
+
+	img {
+		width:100%;
+	}
+	
+}
+
+	.pattern{
+		width: 100%;
+		height: 100px;
+		background-color: rgb(255, 207, 50);
 	}
 
 	// --------------------
