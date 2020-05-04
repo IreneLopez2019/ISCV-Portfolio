@@ -1,27 +1,27 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  overflow-x: hidden;
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	overflow-x: hidden;
+	font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .main-wrapper {
-  position: relative;
-  max-width: 950px;
-  margin: 0 auto;
+	position: relative;
+	max-width: 950px;
+	margin: 0 auto;
 
-  @media (max-width: 992px) {
-    padding: 0 25px;
-  }
+	@media (max-width: 992px) {
+		padding: 0 25px;
+	}
 }
 
 h1,
@@ -30,10 +30,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: linotype-didot, serif;
-  font-weight: 700;
-  font-style: normal;
-  color: var(--title-color);
+	font-family: linotype-didot, serif;
+	font-weight: 700;
+	font-style: normal;
+	color: var(--title-color);
 }
 
 .home-title,
@@ -53,30 +53,34 @@ h6 {
 }
 
 .section-title {
-  font-size: 70px;
-  margin-bottom: 80px;
+	font-size: 70px;
+	margin-bottom: 20px;
+	margin-top: 150px;
 }
 
-.project-title{
-    font-size: 35px;
+.project-title {
+	font-size: 35px;
 	margin-bottom: 30px;
 	margin-top: 80px;
 
-}
-
-p{
-	margin-bottom: 20px;
-
-	@media (min-width: 992px) {
-		font-size:18px;		
+	& :first-child {
+		margin-top: 30px;
 	}
 }
 
-.personalInformationText{
-	text-align: center;
-	margin:0 30px;
-	
+p {
+	margin-bottom: 20px;
+
 	@media (min-width: 992px) {
-		font-size:20px;		
+		font-size: 18px;
+	}
+}
+
+.personalInformationText {
+	text-align: center;
+	margin: 0 30px;
+
+	@media (min-width: 992px) {
+		font-size: 20px;
 	}
 }
